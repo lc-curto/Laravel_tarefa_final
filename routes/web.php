@@ -21,7 +21,7 @@ Route::get('/dashboard', [DashboardController::class, 'index'])
 
 Route::middleware(['auth', 'admin'])->group(function () {
 
-    Route::resource('bands', BandController::class)
+    Route::resource('/bands', BandController::class)
         ->only(['create', 'store', 'destroy'])
         ->names([
             'create' => 'bands.create',
@@ -56,7 +56,7 @@ Route::get('/albums/export', [AlbumController::class, 'export'])
 
 Route::middleware('auth')->group(function () {
 
-    Route::resource('bands', BandController::class)
+    Route::resource('/bands', BandController::class)
         ->only(['edit', 'update'])
         ->names([
             'edit' => 'bands.edit',
@@ -76,7 +76,7 @@ Route::middleware('auth')->group(function () {
 // 5. ROTAS PÚBLICAS — CONSULTA
 // ==========================================
 
-Route::resource('bands', BandController::class)
+Route::resource('/', BandController::class)
     ->only(['index', 'show'])
     ->names([
         'index' => 'bands.all',

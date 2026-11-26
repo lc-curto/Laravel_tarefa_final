@@ -19,7 +19,7 @@
             <div class="container">
 
                 {{-- LOGO --}}
-                <a class="navbar-brand" href="{{ url('/bands') }}">
+                <a class="navbar-brand" href="{{ url('/') }}">
                     <i class="bi bi-music-note-list me-2"></i>
                     CRM Bandas
                 </a>
