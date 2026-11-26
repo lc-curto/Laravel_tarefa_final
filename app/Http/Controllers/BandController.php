@@ -72,7 +72,7 @@ class BandController extends Controller
 
         $albums = $query->get();
 
-        return view('albums.allalbums', compact('band', 'albums', 'searchPar'));
+        return view('bands.show', compact('band', 'albums', 'searchPar'));
     }
 
     /**
