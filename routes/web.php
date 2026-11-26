@@ -41,9 +41,8 @@ Route::resource('bands', BandController::class)
     ]);
 
 Route::resource('albums', AlbumController::class)
-    ->only(['index', 'show'])
+    ->only(['show'])
     ->names([
-        'index' => 'albums.all',
         'show' => 'albums.show',
     ]);
 
