@@ -12,15 +12,6 @@ use Maatwebsite\Excel\Facades\Excel;
 class AlbumController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        $albums = Album::get();
-        return view('albums.allalbums', compact('albums'));
-    }
-
-    /**
      * Show the form for creating a new resource.
      */
     public function create(Request $request)
