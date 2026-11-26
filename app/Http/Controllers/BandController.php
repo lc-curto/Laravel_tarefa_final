@@ -24,7 +24,7 @@ class BandController extends Controller
             })
             ->get();
 
-        return view('bands.allbands', compact('bands', 'searchPar'));
+        return view('bands.index', compact('bands', 'searchPar'));
     }
     /**
      * Show the form for creating a new resource.
